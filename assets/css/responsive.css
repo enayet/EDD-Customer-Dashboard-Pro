@@ -1,0 +1,629 @@
+/**
+ * Responsive Styles for EDD Customer Dashboard Pro
+ * 
+ * Mobile-first responsive design with breakpoints optimized
+ * for customer dashboard usage across all devices.
+ *
+ * @package EDD_Customer_Dashboard_Pro
+ * @version 1.0.0
+ */
+
+/* Breakpoints */
+:root {
+    --edd-breakpoint-xs: 480px;
+    --edd-breakpoint-sm: 768px;
+    --edd-breakpoint-md: 1024px;
+    --edd-breakpoint-lg: 1200px;
+    --edd-breakpoint-xl: 1400px;
+}
+
+/* Base Mobile Styles (320px and up) */
+.edd-customer-dashboard-pro {
+    padding: var(--edd-spacing-sm);
+}
+
+.edd-dashboard-container {
+    padding: var(--edd-spacing-md);
+    max-width: 100%;
+}
+
+/* Dashboard Header - Mobile */
+.edd-dashboard-header {
+    padding: var(--edd-spacing-lg);
+    margin-bottom: var(--edd-spacing-lg);
+}
+
+.edd-welcome-section {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--edd-spacing-md);
+}
+
+.edd-welcome-text h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+}
+
+.edd-welcome-text p {
+    font-size: 1rem;
+}
+
+.edd-user-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+/* Stats Grid - Mobile */
+.edd-stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--edd-spacing-md);
+    margin: var(--edd-spacing-lg) 0;
+}
+
+.edd-stat-card {
+    padding: var(--edd-spacing-lg);
+    min-height: 120px;
+}
+
+.edd-stat-number {
+    font-size: 1.5rem;
+}
+
+.edd-stat-label {
+    font-size: 0.875rem;
+}
+
+.edd-stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--edd-spacing-sm);
+}
+
+/* Navigation - Mobile */
+.edd-dashboard-nav {
+    margin-bottom: var(--edd-spacing-lg);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.edd-nav-tabs {
+    display: flex;
+    gap: var(--edd-spacing-sm);
+    padding-bottom: var(--edd-spacing-sm);
+    min-width: max-content;
+}
+
+.edd-nav-tab {
+    flex-shrink: 0;
+    padding: var(--edd-spacing-sm) var(--edd-spacing-md);
+    font-size: var(--edd-font-size-sm);
+    white-space: nowrap;
+}
+
+.edd-tab-icon {
+    display: none;
+}
+
+.edd-tab-description {
+    display: none;
+}
+
+.edd-tab-count {
+    font-size: 0.75rem;
+    margin-left: var(--edd-spacing-xs);
+}
+
+/* Content Sections - Mobile */
+.edd-dashboard-content {
+    margin-top: var(--edd-spacing-lg);
+}
+
+.edd-content-section {
+    padding: 0;
+}
+
+.edd-section-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--edd-spacing-md);
+}
+
+/* Tables - Mobile */
+.edd-table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.edd-table {
+    min-width: 600px;
+}
+
+.edd-table th,
+.edd-table td {
+    padding: var(--edd-spacing-sm);
+    font-size: var(--edd-font-size-sm);
+}
+
+/* Cards - Mobile */
+.edd-card {
+    padding: var(--edd-spacing-lg);
+    margin-bottom: var(--edd-spacing-lg);
+}
+
+.edd-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--edd-spacing-sm);
+}
+
+/* Buttons - Mobile */
+.edd-btn {
+    padding: var(--edd-spacing-md) var(--edd-spacing-lg);
+    font-size: var(--edd-font-size-sm);
+    width: 100%;
+    justify-content: center;
+}
+
+.edd-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--edd-spacing-sm);
+}
+
+.edd-btn-group .edd-btn {
+    border-radius: var(--edd-border-radius-sm);
+}
+
+/* Forms - Mobile */
+.edd-form-group {
+    margin-bottom: var(--edd-spacing-md);
+}
+
+.edd-form-control {
+    padding: var(--edd-spacing-md);
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+
+/* Modal and Overlay - Mobile */
+.edd-modal {
+    margin: var(--edd-spacing-md);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+}
+
+.edd-modal-content {
+    padding: var(--edd-spacing-lg);
+}
+
+/* Small Mobile Phones (up to 480px) */
+@media (max-width: 479px) {
+    .edd-dashboard-container {
+        padding: var(--edd-spacing-sm);
+    }
+    
+    .edd-welcome-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .edd-stats-grid {
+        gap: var(--edd-spacing-sm);
+    }
+    
+    .edd-stat-card {
+        padding: var(--edd-spacing-md);
+        min-height: 100px;
+    }
+    
+    .edd-nav-tab {
+        padding: var(--edd-spacing-sm);
+        font-size: 0.75rem;
+    }
+    
+    .edd-card {
+        padding: var(--edd-spacing-md);
+    }
+}
+
+/* Larger Mobile / Small Tablets (480px and up) */
+@media (min-width: 480px) {
+    .edd-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .edd-btn-group {
+        flex-direction: row;
+    }
+    
+    .edd-btn-group .edd-btn {
+        flex: 1;
+    }
+    
+    .edd-table {
+        min-width: 100%;
+    }
+    
+    .edd-tab-icon {
+        display: inline;
+        margin-right: var(--edd-spacing-xs);
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .edd-customer-dashboard-pro {
+        padding: var(--edd-spacing-lg);
+    }
+    
+    .edd-dashboard-container {
+        padding: var(--edd-spacing-xl);
+    }
+    
+    .edd-dashboard-wrapper {
+        grid-template-areas: 
+            "header header"
+            "stats stats"
+            "nav nav"
+            "content content";
+    }
+    
+    .edd-welcome-section {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .edd-welcome-text h1 {
+        font-size: 2rem;
+    }
+    
+    .edd-user-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+    
+    .edd-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--edd-spacing-lg);
+    }
+    
+    .edd-nav-tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .edd-nav-tab {
+        flex-shrink: 1;
+        padding: var(--edd-spacing-md) var(--edd-spacing-lg);
+        font-size: var(--edd-font-size-base);
+        min-width: 120px;
+    }
+    
+    .edd-tab-description {
+        display: block;
+        font-size: var(--edd-font-size-sm);
+        color: var(--edd-text-muted);
+        margin-top: var(--edd-spacing-xs);
+    }
+    
+    .edd-btn {
+        width: auto;
+        display: inline-flex;
+    }
+    
+    .edd-card-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .edd-section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .edd-dashboard-wrapper {
+        grid-template-areas: 
+            "header header header"
+            "stats stats stats"
+            "nav nav nav"
+            "content content content";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .edd-welcome-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .edd-user-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .edd-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--edd-spacing-xl);
+    }
+    
+    .edd-nav-tabs {
+        justify-content: flex-start;
+        gap: var(--edd-spacing-md);
+    }
+    
+    .edd-dashboard-content {
+        display: grid;
+        gap: var(--edd-spacing-xl);
+    }
+    
+    .edd-content-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--edd-spacing-xl);
+    }
+    
+    .edd-content-main {
+        grid-area: 1 / 1;
+    }
+    
+    .edd-content-sidebar {
+        grid-area: 1 / 2;
+    }
+    
+    /* Hover effects for desktop */
+    .edd-nav-tab:hover {
+        background: var(--edd-bg-glass);
+        transform: translateY(-2px);
+    }
+    
+    .edd-btn:hover {
+        transform: translateY(-1px);
+    }
+    
+    .edd-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--edd-shadow-xl);
+    }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .edd-dashboard-container {
+        max-width: 1200px;
+        padding: var(--edd-spacing-2xl);
+    }
+    
+    .edd-dashboard-wrapper {
+        grid-template-areas: 
+            "header header header header"
+            "stats stats stats stats"
+            "nav nav nav nav"
+            "content content content sidebar";
+        grid-template-columns: 1fr 1fr 1fr 300px;
+        gap: var(--edd-spacing-2xl);
+    }
+    
+    .edd-dashboard-header {
+        grid-area: header;
+    }
+    
+    .edd-stats-section {
+        grid-area: stats;
+    }
+    
+    .edd-dashboard-nav {
+        grid-area: nav;
+    }
+    
+    .edd-dashboard-content {
+        grid-area: content;
+    }
+    
+    .edd-dashboard-sidebar {
+        grid-area: sidebar;
+    }
+    
+    .edd-stats-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .edd-welcome-text h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Extra Large Desktop (1400px and up) */
+@media (min-width: 1400px) {
+    .edd-dashboard-container {
+        max-width: 1400px;
+    }
+    
+    .edd-dashboard-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr 350px;
+    }
+    
+    .edd-stats-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .edd-dashboard-header {
+        padding: var(--edd-spacing-md);
+        margin-bottom: var(--edd-spacing-md);
+    }
+    
+    .edd-welcome-section {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .edd-welcome-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .edd-user-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .edd-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--edd-spacing-sm);
+        margin: var(--edd-spacing-md) 0;
+    }
+    
+    .edd-stat-card {
+        padding: var(--edd-spacing-md);
+        min-height: 80px;
+    }
+    
+    .edd-nav-tabs {
+        gap: var(--edd-spacing-xs);
+    }
+    
+    .edd-nav-tab {
+        padding: var(--edd-spacing-xs) var(--edd-spacing-sm);
+        font-size: var(--edd-font-size-sm);
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .edd-nav-tab {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .edd-btn {
+        min-height: 44px;
+        padding: var(--edd-spacing-md) var(--edd-spacing-lg);
+    }
+    
+    .edd-btn-icon-only {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .edd-form-control {
+        min-height: 44px;
+        padding: var(--edd-spacing-md);
+    }
+    
+    /* Remove hover effects on touch devices */
+    .edd-card:hover,
+    .edd-nav-tab:hover,
+    .edd-btn:hover {
+        transform: none;
+        box-shadow: inherit;
+    }
+    
+    /* Add touch feedback */
+    .edd-nav-tab:active,
+    .edd-btn:active {
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+}
+
+/* Print Responsive Styles */
+@media print {
+    .edd-dashboard-wrapper {
+        display: block !important;
+    }
+    
+    .edd-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--edd-spacing-md) !important;
+        page-break-inside: avoid;
+    }
+    
+    .edd-card {
+        margin-bottom: var(--edd-spacing-lg) !important;
+        page-break-inside: avoid;
+    }
+    
+    .edd-section-title {
+        page-break-after: avoid;
+    }
+    
+    .edd-table {
+        page-break-inside: auto;
+    }
+    
+    .edd-table tr {
+        page-break-inside: avoid;
+    }
+}
+
+/* Container Queries (Future-proofing) */
+@supports (container-type: inline-size) {
+    .edd-dashboard-container {
+        container-type: inline-size;
+        container-name: dashboard;
+    }
+    
+    @container dashboard (max-width: 600px) {
+        .edd-stats-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .edd-nav-tabs {
+            flex-direction: column;
+        }
+    }
+    
+    @container dashboard (min-width: 800px) {
+        .edd-content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--edd-spacing-xl);
+        }
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .edd-nav-tab,
+    .edd-btn,
+    .edd-card {
+        transition: none;
+    }
+    
+    .edd-nav-tab:hover,
+    .edd-btn:hover,
+    .edd-card:hover {
+        transform: none;
+    }
+    
+    .edd-spinner {
+        animation: none;
+        border: 2px solid var(--edd-primary-color);
+        border-radius: 50%;
+    }
+    
+    .edd-skeleton {
+        animation: none;
+        background: var(--edd-bg-secondary);
+    }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .edd-dashboard-pro {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .edd-card {
+        border-width: 0.5px;
+    }
+    
+    .edd-table th,
+    .edd-table td {
+        border-width: 0.5px;
+    }
+}
