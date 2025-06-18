@@ -1,0 +1,134 @@
+{
+    "name": "Default Dashboard",
+    "description": "Clean and modern default dashboard template with comprehensive customer features",
+    "version": "1.0.0",
+    "author": "EDD Customer Dashboard Pro",
+    "edd_version": "3.0",
+    "wp_version": "5.0",
+    "php_version": "7.4",
+    "screenshot": "screenshot.png",
+    "tags": [
+        "default",
+        "responsive",
+        "modern",
+        "clean"
+    ],
+    "supports": [
+        "purchase-history",
+        "download-tracking",
+        "license-management",
+        "wishlist",
+        "analytics",
+        "support-integration",
+        "referral-tracking",
+        "mobile-responsive",
+        "rtl",
+        "custom-css",
+        "ajax-navigation"
+    ],
+    "sections": {
+        "header": {
+            "enabled": true,
+            "title": "Dashboard Header",
+            "description": "Welcome message and user info"
+        },
+        "stats": {
+            "enabled": true,
+            "title": "Statistics Overview",
+            "description": "Quick stats cards with key metrics"
+        },
+        "navigation": {
+            "enabled": true,
+            "title": "Dashboard Navigation",
+            "description": "Tab-based navigation system"
+        },
+        "purchases": {
+            "enabled": true,
+            "title": "Purchase History",
+            "description": "Complete purchase history with filters"
+        },
+        "downloads": {
+            "enabled": true,
+            "title": "Downloads",
+            "description": "Available downloads with re-download links"
+        },
+        "licenses": {
+            "enabled": true,
+            "title": "License Management",
+            "description": "License keys and activation status"
+        },
+        "wishlist": {
+            "enabled": true,
+            "title": "Wishlist",
+            "description": "Saved products for future purchase"
+        },
+        "analytics": {
+            "enabled": true,
+            "title": "Analytics",
+            "description": "Visual charts and download statistics"
+        },
+        "support": {
+            "enabled": true,
+            "title": "Support",
+            "description": "Customer support integration"
+        }
+    },
+    "layout": {
+        "container_class": "edd-dashboard-pro-default",
+        "grid_system": "css-grid",
+        "breakpoints": {
+            "mobile": "768px",
+            "tablet": "1024px",
+            "desktop": "1200px"
+        }
+    },
+    "colors": {
+        "primary": "#0073aa",
+        "secondary": "#00a0d2",
+        "success": "#46b450",
+        "warning": "#ffb900",
+        "error": "#dc3232",
+        "text": "#23282d",
+        "text_light": "#646970",
+        "background": "#ffffff",
+        "border": "#c3c4c7"
+    },
+    "typography": {
+        "font_family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+        "font_sizes": {
+            "small": "12px",
+            "normal": "14px",
+            "medium": "16px",
+            "large": "18px",
+            "xlarge": "24px"
+        }
+    },
+    "assets": {
+        "css": [
+            "style.css"
+        ],
+        "js": [
+            "script.js"
+        ],
+        "dependencies": {
+            "css": [
+                "dashicons"
+            ],
+            "js": [
+                "jquery",
+                "wp-util"
+            ]
+        }
+    },
+    "customization": {
+        "color_scheme": true,
+        "layout_options": true,
+        "section_visibility": true,
+        "custom_css": true
+    },
+    "performance": {
+        "lazy_load": true,
+        "ajax_enabled": true,
+        "caching": true
+    }
+}
